@@ -1,0 +1,144 @@
+a:link {text-decoration:none;color:white;}    /* unvisited link */
+a:visited {text-decoration:none;color:white;} /* visited link */
+a:hover {text-decoration:none;color:#0b5fa5;}   /* mouse over link */
+a:active {text-decoration:none;color;white;}  /* selected link */
+
+
+html {
+background-color:#000000;
+}
+
+header {
+background-color:#000000;
+
+}
+
+#headd{
+margin: 0 auto;
+}
+#kuva{
+margin: 0 auto;
+}
+
+#foot {
+text-align:center;
+}
+
+footer {
+background-color:#000000;
+color:#ffffff;
+
+}
+
+body {
+background-color:#eeeeff;
+font-size:12px;
+font-family:Tahoma, Geneva, sans-serif;
+
+}
+
+h1 {
+color:black;
+font-size:18px;
+}
+
+h2 {
+color:grey;
+font-size:16px;
+}
+
+h3 {
+color:#0b5fa5;
+font-size:16px;
+
+}
+
+.active {
+color:grey;
+}
+
+li {
+list-style-type: none;
+}
+
+#vasen{
+float:left;
+width:25%;
+
+}
+section{
+float:left;
+width:60%;
+}
+#oikea{
+width:15%;
+	
+		
+}
+#tarjous{
+margin-left:0;
+text-align:right;
+}
+#yla{
+margin:0 auto;
+}
+
+
+#mouseTrack {
+    background-color:black;
+    font-size:12px;
+    height:20px;
+    width:150px;
+    padding:10px;
+    color:#0b5fa5;
+    display:none;
+}
+
+canvas{
+	position:relative;
+	border:1px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  #projektityo {
+	width:53%;
+	margin:2%;
+	display:inline-block;
+}
+
+
+
+
+footer {
+	position:fixed;
+    color:white;
+    text-align:center;
+    width:100%;
+    bottom:20px;
+	height:0px;
+	z-index:-4;
+	display:block;
+}
+
+
+
+
+#canvas {
+	position:absolute;
+	z-index:-3;
+	display:inline-block;
+}
+
+#start {
+	position:absolute;
+	z-index:-1;
+	display:inline-block;
+}
+
+#end {
+	position:absolute;
+	z-index:-2;
+	display:inline-block;
+}
