@@ -1,6 +1,6 @@
 document.onkeydown = function(e) {
 	
-	if (e.which == P1_LEFT || e.which == P1_RIGHT || e.which == P1_UP || e.which == P1_DOWN) {
+	if ([P1_LEFT, P1_RIGHT, P1_UP, P1_W, P1_A, P1_D].includes(e.which)) {
 		e.preventDefault();
 	}
 	
@@ -87,13 +87,23 @@ document.onkeydown = function(e) {
 			startScreen();
 		}
 		
-		if (e.which == P1_LEFT || e.keyCode == P1_LEFT) {
+		if (
+			e.which == P1_LEFT ||
+			e.keyCode == P1_LEFT ||
+			e.which == P1_A ||
+			e.keyCode == P1_A
+		) {
 			if (selected_level > 0) {
 				selected_level--;
 				levelScreen();
 			}
 		}
-		if (e.which == P1_RIGHT || e.keyCode == P1_RIGHT) {
+		if (
+			e.which == P1_RIGHT ||
+			e.keyCode == P1_RIGHT ||
+			e.which == P1_D ||
+			e.keyCode == P1_D
+		) {
 			if (selected_level < 4) {
 				if (cleared_levels.indexOf(selected_level + 1) != -1) {
 				selected_level++;
@@ -147,16 +157,31 @@ document.onkeydown = function(e) {
 			pauseScreen();
 		}
 		
-		if (e.which == P1_LEFT || e.keyCode == P1_LEFT) {
+		if (
+			e.which == P1_LEFT ||
+			e.keyCode == P1_LEFT ||
+			e.which == P1_A ||
+			e.keyCode == P1_A
+		) {
 			P1_LEFT_DOWN = true;
 			P1_FACING = false;
 		}
-		if (e.which == P1_RIGHT || e.keyCode == P1_RIGHT) {
+		if (
+			e.which == P1_RIGHT ||
+			e.keyCode == P1_RIGHT ||
+			e.which == P1_D ||
+			e.keyCode == P1_D
+		) {
 			P1_RIGHT_DOWN = true;
 			P1_FACING = true;
 		}
 		
-		if (e.which == P1_UP || e.keyCode == P1_UP) {
+		if (
+			e.which == P1_UP ||
+			e.keyCode == P1_UP ||
+			e.which == P1_W ||
+			e.keyCode == P1_W
+		) {
 			if (!P1_UP_DOWN) {
 				P1_JUMP = true; // ? 
 				onSolid = false;
@@ -306,15 +331,30 @@ document.onkeyup = function(e) {
 	
 		// PLAYER MOVEMENTS & ACTIONS
 		
-		if (e.which == P1_LEFT || e.keyCode == P1_LEFT) {
+		if (
+			e.which == P1_LEFT ||
+			e.keyCode == P1_LEFT ||
+			e.which == P1_A ||
+			e.keyCode == P1_A	
+		) {
 			e.preventDefault();
 			P1_LEFT_DOWN = false;
 		}
-		if (e.which == P1_RIGHT || e.keyCode == P1_RIGHT) {
+		if (
+			e.which == P1_RIGHT ||
+			e.keyCode == P1_RIGHT ||
+			e.which == P1_D ||
+			e.keyCode == P1_D
+		) {
 			e.preventDefault();
 			P1_RIGHT_DOWN = false;
 		}
-		if (e.which == P1_UP || e.keyCode == P1_UP) {
+		if (
+			e.which == P1_UP ||
+			e.keyCode == P1_UP ||
+			e.which == P1_W ||
+			e.keyCode == P1_W
+		) {
 			e.preventDefault();
 			P1_UP_DOWN = false;
 		}
